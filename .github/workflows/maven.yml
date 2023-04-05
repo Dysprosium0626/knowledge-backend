@@ -10,15 +10,15 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 env:
   REGISTRY: docker.io  # 默认为 docker.io，即去 Docker Hub 上找
   IMAGE_NAME: ${{ github.event.repository.name }}  # 使用 GitHub Actions 提供的能力，可以自动获取仓库名
   IMAGE_TAG: latest  # Docker Image 的 tag，为了方便我直接设置 latest
-  PORT: 8081  # 服务要暴露的端口，可以改
+  PORT: 8080  # 服务要暴露的端口，可以改
 
 jobs:
   build:

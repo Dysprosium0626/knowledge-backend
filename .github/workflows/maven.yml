@@ -18,7 +18,7 @@ env:
   REGISTRY: docker.io  # 默认为 docker.io，即去 Docker Hub 上找
   IMAGE_NAME: ${{ github.event.repository.name }}  # 使用 GitHub Actions 提供的能力，可以自动获取仓库名
   IMAGE_TAG: latest  # Docker Image 的 tag，为了方便我直接设置 latest
-  PORT: 8080  # 服务要暴露的端口，可以改
+  PORT: 8081  # 服务要暴露的端口，可以改
 
 jobs:
   build:
@@ -72,7 +72,7 @@ jobs:
       # 触发服务器部署脚本
       - name: Trigger server deployment script
         run: |
-          ssh ubuntu@${{ secrets.SERVER_HOST }} "docker stop ${{ env.IMAGE_NAME }} || true"
-          ssh ubuntu@${{ secrets.SERVER_HOST }} "docker rm ${{ env.IMAGE_NAME }} || true"
-          ssh ubuntu@${{ secrets.SERVER_HOST }} "docker pull ${{ secrets.DOCKER_HUB_USER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
-          ssh ubuntu@${{ secrets.SERVER_HOST }} "docker run -p ${{ env.PORT }}:${{ env.PORT}} --name ${{ env.IMAGE_NAME }} -d ${{ secrets.DOCKER_HUB_USER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
+          ssh root@${{ secrets.SERVER_HOST }} "docker stop ${{ env.IMAGE_NAME }} || true"
+          ssh root@${{ secrets.SERVER_HOST }} "docker rm ${{ env.IMAGE_NAME }} || true"
+          ssh root@${{ secrets.SERVER_HOST }} "docker pull ${{ secrets.DOCKER_HUB_USER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
+          ssh root@${{ secrets.SERVER_HOST }} "docker run -p ${{ env.PORT }}:${{ env.PORT}} --name ${{ env.IMAGE_NAME }} -d ${{ secrets.DOCKER_HUB_USER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"

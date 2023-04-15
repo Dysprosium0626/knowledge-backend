@@ -21,5 +21,10 @@ public class UserController {
     public String hello() {
         return "hello";
     }
+
+    @GetMapping("test")
+    public String test() {
+        return "test";
+    }
 }
 

@@ -17,4 +17,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permission> implements PermissionService {
 
+    @Override
+    public Permission changeUserPermission(Permission permission) {
+        return null;
+    }
 }

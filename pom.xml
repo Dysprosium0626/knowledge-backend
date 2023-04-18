@@ -6,6 +6,7 @@
     <modules>
         <module>knowledge-mbg</module>
         <module>knowledge-portal</module>
+        <module>knowledge-common</module>
     </modules>
 
     <parent>

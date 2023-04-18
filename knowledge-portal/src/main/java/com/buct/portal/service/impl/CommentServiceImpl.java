@@ -1,8 +1,8 @@
 package com.buct.portal.service.impl;
 
-import com.buct.portal.model.User;
-import com.buct.portal.mapper.UserMapper;
-import com.buct.portal.service.UserService;
+import com.buct.portal.model.Comment;
+import com.buct.portal.mapper.CommentMapper;
+import com.buct.portal.service.CommentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2023-04-18
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> implements CommentService {
 
 }

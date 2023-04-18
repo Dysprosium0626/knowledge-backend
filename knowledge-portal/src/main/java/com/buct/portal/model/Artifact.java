@@ -18,46 +18,62 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("user")
-public class User implements Serializable {
+@TableName("artifact")
+public class Artifact implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     private String id;
 
-    private String username;
+    private String dated;
 
-    private String password;
+    private String artist;
 
-    private String email;
+    private String role;
 
-    private Integer isAdmin;
+    private String department;
+
+    private String medium;
 
     private String description;
 
-    private Integer gender;
+    private String comments;
+
+    private String webUrl;
+
+    private String imgUrl;
+
+    private Date submitTime;
 
     private Date createdTime;
 
     private Date updatedTime;
 
-    private Boolean isDeleted;
+    private Integer isDeleted;
 
 
     public static final String ID = "id";
 
-    public static final String USERNAME = "username";
+    public static final String DATED = "dated";
 
-    public static final String PASSWORD = "password";
+    public static final String ARTIST = "artist";
 
-    public static final String EMAIL = "email";
+    public static final String ROLE = "role";
 
-    public static final String IS_ADMIN = "is_admin";
+    public static final String DEPARTMENT = "department";
+
+    public static final String MEDIUM = "medium";
 
     public static final String DESCRIPTION = "description";
 
-    public static final String GENDER = "gender";
+    public static final String COMMENTS = "comments";
+
+    public static final String WEB_URL = "web_url";
+
+    public static final String IMG_URL = "img_url";
+
+    public static final String SUBMIT_TIME = "submit_time";
 
     public static final String CREATED_TIME = "created_time";
 

@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-04-18
  */
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/artifact")
+public class ArtifactController {
 
 }
 

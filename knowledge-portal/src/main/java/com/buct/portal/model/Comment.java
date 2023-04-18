@@ -18,46 +18,30 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("user")
-public class User implements Serializable {
+@TableName("comment")
+public class Comment implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)
     private String id;
 
-    private String username;
+    private String userId;
 
-    private String password;
-
-    private String email;
-
-    private Integer isAdmin;
-
-    private String description;
-
-    private Integer gender;
+    private String comment;
 
     private Date createdTime;
 
     private Date updatedTime;
 
-    private Boolean isDeleted;
+    private Integer isDeleted;
 
 
     public static final String ID = "id";
 
-    public static final String USERNAME = "username";
+    public static final String USER_ID = "user_id";
 
-    public static final String PASSWORD = "password";
-
-    public static final String EMAIL = "email";
-
-    public static final String IS_ADMIN = "is_admin";
-
-    public static final String DESCRIPTION = "description";
-
-    public static final String GENDER = "gender";
+    public static final String COMMENT = "comment";
 
     public static final String CREATED_TIME = "created_time";
 

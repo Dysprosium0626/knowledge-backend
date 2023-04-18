@@ -1,6 +1,6 @@
 package com.buct.portal.mapper;
 
-import com.buct.portal.model.User;
+import com.buct.portal.model.Comment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author dysprosium
  * @since 2023-04-18
  */
-public interface UserMapper extends BaseMapper<User> {
+public interface CommentMapper extends BaseMapper<Comment> {
 
 }

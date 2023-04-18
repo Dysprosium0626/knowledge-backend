@@ -1,6 +1,6 @@
 package com.buct.portal.service;
 
-import com.buct.portal.model.User;
+import com.buct.portal.model.Comment;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author dysprosium
  * @since 2023-04-18
  */
-public interface UserService extends IService<User> {
+public interface CommentService extends IService<Comment> {
 
 }

@@ -29,6 +29,7 @@ import java.util.List;
 @RequestMapping("/user")
 @Api(tags = "用户模块")
 @ApiSupport(author = "dysprosium")
+@CrossOrigin
 public class UserController {
     @Autowired
     UserService userService;

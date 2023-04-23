@@ -1,11 +1,15 @@
 FROM eclipse-temurin:11-jre as builder
 WORKDIR application
+RUN apt-get clean && apt-get update
+RUN apt-get -y install mysql-server
 ARG JAR_FILE=knowledge-portal/target/*.jar
 COPY ${JAR_FILE} application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
 
 FROM eclipse-temurin:11-jre
 WORKDIR application
+RUN apt-get clean && apt-get update
+RUN apt-get -y install mysql-server
 COPY --from=builder application/dependencies/ ./
 RUN true
 COPY --from=builder application/spring-boot-loader/ ./

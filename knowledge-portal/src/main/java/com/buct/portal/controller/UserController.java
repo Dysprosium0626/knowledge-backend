@@ -26,7 +26,7 @@ import java.util.List;
  * @since 2023-04-18
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 @Api(tags = "用户模块")
 @ApiSupport(author = "dysprosium")
 @CrossOrigin

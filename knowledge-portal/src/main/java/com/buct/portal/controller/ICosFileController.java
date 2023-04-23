@@ -4,6 +4,8 @@ import com.buct.common.api.CommonResult;
 import com.buct.portal.model.FileMeta;
 import com.buct.portal.service.ICosFileService;
 import com.buct.portal.service.UserService;
+import com.github.xiaoymin.knife4j.annotations.ApiSupport;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +20,8 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/files")
 @CrossOrigin
+@Api(tags = "COS模块")
+@ApiSupport(author = "dysprosium")
 @Slf4j
 public class ICosFileController {
     @Resource
@@ -26,7 +30,7 @@ public class ICosFileController {
     @Resource
     private UserService userService;
 
-    @PostMapping("/test")
+    @PostMapping("/upload")
     public CommonResult test(@RequestParam("files") MultipartFile[] files){
         String upload = iCosFileService.upload(files);
         return CommonResult.success(upload);

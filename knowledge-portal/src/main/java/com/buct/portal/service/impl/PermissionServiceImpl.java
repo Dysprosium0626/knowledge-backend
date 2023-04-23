@@ -1,9 +1,11 @@
 package com.buct.portal.service.impl;
 
+import com.buct.common.exception.Asserts;
 import com.buct.portal.model.Permission;
 import com.buct.portal.mapper.PermissionMapper;
 import com.buct.portal.service.PermissionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,8 +19,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permission> implements PermissionService {
 
+    @Autowired
+    PermissionMapper permissionMapper;
+
     @Override
     public Permission changeUserPermission(Permission permission) {
-        return null;
-    }
+        int updateById = permissionMapper.updateById(permission);
+        if (updateById == 0){
+            Asserts.fail("update user permission failed...");
+        }
+        return permission;
+     }
 }

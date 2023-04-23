@@ -36,7 +36,9 @@ class UserServiceTest {
     @Test
     void listUser() {
         List<UserVo> userVos = userService.listUser();
-        System.out.println(userVos);
+        for (UserVo userVo : userVos) {
+            System.out.println(userVo);
+        }
         assertTrue(userVos.size() >= 0);
     }
 

@@ -29,6 +29,7 @@ import java.util.Map;
 @Api(description = "MySQL数据备份模块")
 @ApiSupport(author = "dysprosium")
 @RequestMapping(value = "/mysql")
+@CrossOrigin
 public class SystemMysqlBackupsController {
 
     /**

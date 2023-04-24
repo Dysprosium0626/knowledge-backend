@@ -4,6 +4,7 @@ import com.buct.portal.model.SysLog;
 import com.buct.portal.service.SysLogService;
 import com.buct.portal.util.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
  */
 @RestController
 @RequestMapping(value = "/sys/log")
+@CrossOrigin
 public class SysLogController {
 
     @Autowired

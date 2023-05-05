@@ -28,10 +28,9 @@ public class ArtifactServiceImpl extends ServiceImpl<ArtifactMapper, Artifact> i
     @Override
     public List<Artifact> listArtifacts() {
         // 调用artifactMapper的selectList方法
-
+        List<Artifact> artifacts = artifactMapper.selectList(null);
         // 直接返回获取的列表
-
-        return null;
+        return artifacts;
     }
 
     @Override

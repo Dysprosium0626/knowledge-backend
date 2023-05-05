@@ -2,6 +2,7 @@ package com.buct.portal.service;
 
 import com.buct.portal.model.Permission;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author dysprosium
  * @since 2023-04-18
  */
+@Service
 public interface PermissionService extends IService<Permission> {
 
     Permission changeUserPermission(Permission permission);

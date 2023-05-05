@@ -5,6 +5,8 @@ import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.crypto.digest.BCrypt;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.buct.common.exception.Asserts;
+import com.buct.portal.mapper.PermissionMapper;
+import com.buct.portal.model.Permission;
 import com.buct.portal.model.User;
 import com.buct.portal.mapper.UserMapper;
 import com.buct.portal.model.VO.UserLoginVo;
@@ -33,6 +35,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Autowired
     UserMapper userMapper;
+
+    @Autowired
+    PermissionMapper permissionMapper;
 
     @Override
     public UserVo login(UserLoginVo userLoginVo) {
@@ -63,6 +68,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         User user = new User();
         BeanUtil.copyProperties(userLoginVo, user);
         Boolean addUser = this.addUser(user);
+        List<UserVo> userByUsername = getUserByUsername(user.getUsername());
+        int insert = permissionMapper.insert(new Permission(userByUsername.get(0).getId(), 0, 0, 0));
+        if (insert == 0) {
+            Asserts.fail("add user permission failed");
+        }
         return addUser;
     }
 

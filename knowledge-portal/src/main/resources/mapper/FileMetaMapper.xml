@@ -3,9 +3,9 @@
 <mapper namespace="com.buct.portal.mapper.FileMetaMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.buct.portal.model.FileMeta">
-        <id column="id" property="id" />
-        <result column="url" property="url" />
-    </resultMap>
+<!--    <resultMap id="BaseResultMap" type="com.buct.portal.model.FileMeta">-->
+<!--        <id column="id" property="id" />-->
+<!--        <result column="url" property="url" />-->
+<!--    </resultMap>-->
 
 </mapper>

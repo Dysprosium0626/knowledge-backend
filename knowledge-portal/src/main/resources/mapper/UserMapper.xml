@@ -3,17 +3,17 @@
 <mapper namespace="com.buct.portal.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.buct.portal.model.User">
-        <id column="id" property="id" />
-        <result column="username" property="username" />
-        <result column="password" property="password" />
-        <result column="email" property="email" />
-        <result column="is_admin" property="isAdmin" />
-        <result column="description" property="description" />
-        <result column="gender" property="gender" />
-        <result column="created_time" property="createdTime" />
-        <result column="updated_time" property="updatedTime" />
-        <result column="is_deleted" property="isDeleted" />
-    </resultMap>
+<!--    <resultMap id="BaseResultMap" type="com.buct.portal.model.User">-->
+<!--        <id column="id" property="id" />-->
+<!--        <result column="username" property="username" />-->
+<!--        <result column="password" property="password" />-->
+<!--        <result column="email" property="email" />-->
+<!--        <result column="is_admin" property="isAdmin" />-->
+<!--        <result column="description" property="description" />-->
+<!--        <result column="gender" property="gender" />-->
+<!--        <result column="created_time" property="createdTime" />-->
+<!--        <result column="updated_time" property="updatedTime" />-->
+<!--        <result column="is_deleted" property="isDeleted" />-->
+<!--    </resultMap>-->
 
 </mapper>

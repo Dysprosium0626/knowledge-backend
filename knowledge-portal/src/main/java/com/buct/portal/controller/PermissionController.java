@@ -1,10 +1,17 @@
 package com.buct.portal.controller;
 
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import com.buct.common.api.CommonResult;
+import com.buct.portal.mapper.CommentMapper;
+import com.buct.portal.mapper.PermissionMapper;
+import com.buct.portal.model.Permission;
+import com.buct.portal.service.PermissionService;
+import com.buct.portal.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -18,6 +25,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/permission")
 @CrossOrigin
 public class PermissionController {
+
+    @Autowired
+    UserService userService;
+
+    @Autowired
+    PermissionService permissionService;
+
+    @PutMapping("/update")
+    @Operation(summary = "获取用户详情",description = "根据给出的userId查询用户信息")
+    public CommonResult updateUserPermission(Permission permission) {
+        Permission permission1 = permissionService.changeUserPermission(permission);
+        return CommonResult.success(permission1);
+    }
 
 }
 

@@ -3,13 +3,13 @@
 <mapper namespace="com.buct.portal.mapper.CommentMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.buct.portal.model.Comment">
-        <id column="id" property="id" />
-        <result column="user_id" property="userId" />
-        <result column="comment" property="comment" />
-        <result column="created_time" property="createdTime" />
-        <result column="updated_time" property="updatedTime" />
-        <result column="is_deleted" property="isDeleted" />
-    </resultMap>
+<!--    <resultMap id="BaseResultMap" type="com.buct.portal.model.Comment">-->
+<!--        <id column="id" property="id" />-->
+<!--        <result column="user_id" property="userId" />-->
+<!--        <result column="comment" property="comment" />-->
+<!--        <result column="created_time" property="createdTime" />-->
+<!--        <result column="updated_time" property="updatedTime" />-->
+<!--        <result column="is_deleted" property="isDeleted" />-->
+<!--    </resultMap>-->
 
 </mapper>

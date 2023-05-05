@@ -3,11 +3,11 @@
 <mapper namespace="com.buct.portal.mapper.PermissionMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.buct.portal.model.Permission">
-        <id column="user_id" property="userId" />
-        <result column="can_login" property="canLogin" />
-        <result column="can_like" property="canLike" />
-        <result column="can_comment" property="canComment" />
-    </resultMap>
+<!--    <resultMap id="BaseResultMap" type="com.buct.portal.model.Permission">-->
+<!--        <id column="user_id" property="userId" />-->
+<!--        <result column="can_login" property="canLogin" />-->
+<!--        <result column="can_like" property="canLike" />-->
+<!--        <result column="can_comment" property="canComment" />-->
+<!--    </resultMap>-->
 
 </mapper>

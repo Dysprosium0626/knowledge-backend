@@ -37,7 +37,7 @@ public class ICosFileController {
     }
 
     @PostMapping("/add")
-    public CommonResult addFileMeta(@RequestBody String url) {
+    public CommonResult addFileMeta(@RequestParam("url") String url) {
         FileMeta fileMeta = iCosFileService.addFileMeta(url);
         return CommonResult.success(fileMeta);
     }

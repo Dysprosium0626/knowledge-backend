@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface FileMetaService extends IService<FileMeta> {
 
+    FileMeta getFileMetaById(String id);
 }

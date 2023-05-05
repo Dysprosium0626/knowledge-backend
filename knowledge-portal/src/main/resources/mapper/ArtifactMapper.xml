@@ -3,21 +3,21 @@
 <mapper namespace="com.buct.portal.mapper.ArtifactMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.buct.portal.model.Artifact">
-        <id column="id" property="id" />
-        <result column="dated" property="dated" />
-        <result column="artist" property="artist" />
-        <result column="role" property="role" />
-        <result column="department" property="department" />
-        <result column="medium" property="medium" />
-        <result column="description" property="description" />
-        <result column="comments" property="comments" />
-        <result column="web_url" property="webUrl" />
-        <result column="img_url" property="imgUrl" />
-        <result column="submit_time" property="submitTime" />
-        <result column="created_time" property="createdTime" />
-        <result column="updated_time" property="updatedTime" />
-        <result column="is_deleted" property="isDeleted" />
-    </resultMap>
+<!--    <resultMap id="BaseResultMap" type="com.buct.portal.model.Artifact">-->
+<!--        <id column="id" property="id" />-->
+<!--        <result column="dated" property="dated" />-->
+<!--        <result column="artist" property="artist" />-->
+<!--        <result column="role" property="role" />-->
+<!--        <result column="department" property="department" />-->
+<!--        <result column="medium" property="medium" />-->
+<!--        <result column="description" property="description" />-->
+<!--        <result column="comments" property="comments" />-->
+<!--        <result column="web_url" property="webUrl" />-->
+<!--        <result column="img_url" property="imgUrl" />-->
+<!--        <result column="submit_time" property="submitTime" />-->
+<!--        <result column="created_time" property="createdTime" />-->
+<!--        <result column="updated_time" property="updatedTime" />-->
+<!--        <result column="is_deleted" property="isDeleted" />-->
+<!--    </resultMap>-->
 
 </mapper>

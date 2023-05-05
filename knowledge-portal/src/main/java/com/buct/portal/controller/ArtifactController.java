@@ -9,6 +9,7 @@ import com.buct.portal.model.VO.UserVo;
 import com.buct.portal.service.ArtifactService;
 import com.buct.portal.service.UserService;
 import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
+import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
@@ -27,6 +28,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/artifact")
+@Api(tags = "文物模块")
 @CrossOrigin
 public class ArtifactController {
 

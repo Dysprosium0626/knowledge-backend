@@ -7,7 +7,6 @@ import com.buct.portal.service.SystemMysqlBackupsService;
 import com.github.xiaoymin.knife4j.annotations.ApiSupport;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
@@ -26,7 +25,7 @@ import java.util.Map;
  * 类描述： MySQL数据备份接口
  */
 @RestController
-@Api(description = "MySQL数据备份模块")
+@Api(tags = "MySQL数据备份模块")
 @ApiSupport(author = "dysprosium")
 @RequestMapping(value = "/mysql")
 @CrossOrigin

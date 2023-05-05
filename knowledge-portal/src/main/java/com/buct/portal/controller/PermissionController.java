@@ -7,6 +7,7 @@ import com.buct.portal.mapper.PermissionMapper;
 import com.buct.portal.model.Permission;
 import com.buct.portal.service.PermissionService;
 import com.buct.portal.service.UserService;
+import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/permission")
+@Api(tags = "权限模块")
 @CrossOrigin
 public class PermissionController {
 

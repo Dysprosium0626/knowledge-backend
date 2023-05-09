@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author dysprosium
@@ -35,9 +35,16 @@ public class PermissionController {
     PermissionService permissionService;
 
     @PutMapping("/update")
-    @Operation(summary = "获取用户详情",description = "根据给出的userId查询用户信息")
+    @Operation(summary = "更新用户的权限", description = "根据给出的userId和Permission更新用户的权限")
     public CommonResult updateUserPermission(Permission permission) {
         Permission permission1 = permissionService.changeUserPermission(permission);
+        return CommonResult.success(permission1);
+    }
+
+    @GetMapping("/{userId}")
+    @Operation(summary = "获取用户的权限", description = "根据给出的userId获取用户的权限")
+    public CommonResult getUserPermission(@PathVariable Integer userId) {
+        Permission permission1 = permissionService.getPermissionById(userId);
         return CommonResult.success(permission1);
     }
 

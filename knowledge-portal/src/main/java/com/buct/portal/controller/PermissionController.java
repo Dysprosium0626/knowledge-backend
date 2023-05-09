@@ -36,7 +36,7 @@ public class PermissionController {
 
     @PutMapping("/update")
     @Operation(summary = "更新用户的权限", description = "根据给出的userId和Permission更新用户的权限")
-    public CommonResult updateUserPermission(Permission permission) {
+    public CommonResult updateUserPermission(@RequestBody Permission permission) {
         Permission permission1 = permissionService.changeUserPermission(permission);
         return CommonResult.success(permission1);
     }

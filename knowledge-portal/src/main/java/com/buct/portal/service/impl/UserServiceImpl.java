@@ -117,12 +117,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         QueryWrapper<User> queryWrapper = new QueryWrapper<User>().eq("username", user.getUsername());
         List<User> users = userMapper.selectList(queryWrapper);
         if (users.size() >= 1) {
-            return false;
+            Asserts.fail("username exist...");
         }
         user.setPassword(BCrypt.hashpw(user.getPassword()));
         int insert = userMapper.insert(user);
         if (insert == 0) {
-            return false;
+            Asserts.fail("insert user failed...");
         }
         return true;
     }

@@ -3,6 +3,7 @@ package com.buct.portal.controller;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.buct.common.api.CommonResult;
+import com.buct.portal.model.User;
 import com.buct.portal.model.VO.UserLoginVo;
 import com.buct.portal.model.VO.UserVo;
 import com.buct.portal.service.UserService;
@@ -47,6 +48,13 @@ public class UserController {
     public CommonResult listUser() {
         List<UserVo> userVos = userService.listUser();
         return CommonResult.success(userVos);
+    }
+
+    @PostMapping("/add")
+    @Operation(summary = "新增用户",description = "给出新的信息")
+    public CommonResult addUser(@RequestBody User user) {
+        Boolean addUser = userService.addUser(user);
+        return CommonResult.success(addUser);
     }
 
     @PutMapping("/update")

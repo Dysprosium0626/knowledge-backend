@@ -1,5 +1,6 @@
 package com.buct.portal.service.impl;
 
+import cn.hutool.core.util.ObjectUtil;
 import com.buct.common.exception.Asserts;
 import com.buct.portal.model.Permission;
 import com.buct.portal.mapper.PermissionMapper;
@@ -30,4 +31,13 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
         }
         return permission;
      }
+
+    @Override
+    public Permission getPermissionById(Integer userId) {
+        Permission permission = permissionMapper.selectById(userId);
+        if (ObjectUtil.isNull(permission)) {
+            Asserts.fail("User permission does not exist...");
+        }
+        return permission;
+    }
 }

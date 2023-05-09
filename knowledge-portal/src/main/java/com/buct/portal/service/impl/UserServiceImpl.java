@@ -67,6 +67,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
         User user = new User();
         BeanUtil.copyProperties(userLoginVo, user);
+        user.setGender(0);
+        user.setDescription("Please change the default description...");
         Boolean addUser = this.addUser(user);
         List<UserVo> userByUsername = getUserByUsername(user.getUsername());
         int insert = permissionMapper.insert(new Permission(userByUsername.get(0).getId(), 0, 0, 0));

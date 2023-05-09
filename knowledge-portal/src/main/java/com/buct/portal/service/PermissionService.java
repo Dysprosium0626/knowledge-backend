@@ -16,6 +16,6 @@ import org.springframework.stereotype.Service;
 public interface PermissionService extends IService<Permission> {
 
     Permission changeUserPermission(Permission permission);
-
+    Permission getPermissionById(Integer userId);
 
 }

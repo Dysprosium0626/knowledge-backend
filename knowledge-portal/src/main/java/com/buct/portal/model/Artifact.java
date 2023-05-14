@@ -26,6 +26,8 @@ public class Artifact implements Serializable {
     @TableId(value = "id", type = IdType.ASSIGN_ID)
     private String id;
 
+    private String title;
+
     private String dated;
 
     private String artist;

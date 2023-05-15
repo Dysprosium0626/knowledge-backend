@@ -38,6 +38,8 @@ public class Artifact implements Serializable {
 
     private String medium;
 
+    private String country;
+
     private String description;
 
     private String comments;

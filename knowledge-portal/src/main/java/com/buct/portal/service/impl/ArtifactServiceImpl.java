@@ -61,17 +61,22 @@ public class ArtifactServiceImpl extends ServiceImpl<ArtifactMapper, Artifact> i
     @Override
     public Boolean deleteArtifactById(Integer artifactId) {
         // 调用artifactMapper的deleteById方法
-
+        int delete = artifactMapper.deleteById(artifactId);
+        if (delete == 0) {
+            Asserts.fail("delete fails...");
+        }
         // 判断返回值是0还是1，返回对应的bool值
-        return null;
+        return true;
     }
 
     @Override
     public Artifact updateArtifactById(Artifact artifact) {
         // 调用artifactMapper的updateById方法
-
+        int updateById = artifactMapper.updateById(artifact);
         // 判断返回值是0还是1，返回对应的bool值
-
-        return null;
+        if (updateById == 0) {
+            Asserts.fail("update fails...");
+        }
+        return artifact;
     }
 }
